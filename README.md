@@ -23,6 +23,7 @@
 ## scenarios to test
 - code translation: from vanilla JS & html to react, from tailwind to CSS
 - creating a net new UI component (from screenshot & figma integration)
+- add storybook and create stories
 - create an API endpoint (feed it documentation)
 - write a test
 - refactor some code
