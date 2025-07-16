@@ -1,0 +1,139 @@
+.page {
+  min-height: 100vh;
+  background-color: var(--background);
+  padding: var(--spacing-8);
+}
+
+.container {
+  max-width: 64rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
+}
+
+.header {
+  text-align: center;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  letter-spacing: -0.025em;
+  color: var(--foreground);
+}
+
+.subtitle {
+  margin-top: var(--spacing-4);
+  font-size: 1.125rem;
+  color: var(--muted-foreground);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2rem;
+  color: var(--foreground);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-4);
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.grid2Col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-8);
+}
+
+@media (min-width: 1024px) {
+  .grid2Col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.subsection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.subsectionTitle {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+.buttonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+}
+
+.buttonGroupVertical {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+@media (min-width: 640px) {
+  .buttonGroupVertical {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  color: var(--foreground);
+}
+
+.formData {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background-color: var(--card, var(--background));
+  padding: var(--spacing-6);
+}
+
+.formDataPre {
+  font-size: 0.875rem;
+  font-family: var(--font-mono);
+  color: var(--foreground);
+  margin: 0;
+  white-space: pre-wrap;
+}

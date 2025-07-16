@@ -1,0 +1,127 @@
+# AI Demo Project - Cursor Rules
+
+## Project Context
+This is a Next.js application with TypeScript, CSS Modules, and Radix UI components. The project showcases reusable UI components built with modern web technologies.
+
+## Technology Stack
+- Next.js 15+ with App Router
+- TypeScript for type safety
+- CSS Modules for styling (NOT Tailwind CSS)
+- Radix UI for accessible components
+- React 19+
+
+## Coding Standards
+
+### TypeScript
+- Use TypeScript for all code
+- Prefer interfaces over types
+- Use functional components with TypeScript interfaces
+- Avoid enums; use const objects instead
+- Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError)
+
+### React & Next.js
+- Use functional components with hooks
+- Prefer React Server Components (RSC) when possible
+- Minimize 'use client' directives
+- Use Next.js App Router patterns
+- Implement proper error boundaries
+
+### Styling (CSS Modules)
+- Use CSS Modules for component styling
+- Import styles as: `import styles from './component.module.css'`
+- Use CSS custom properties from globals.css for design tokens
+- Follow BEM-like naming conventions in CSS modules
+- Keep styles scoped to components
+
+### File Structure
+- Use lowercase with dashes for directories (e.g., `components/auth-wizard`)
+- Favor named exports for components
+- Structure files: exported component, subcomponents, helpers, static content, types
+- Place CSS modules next to their components
+
+### Component Patterns
+- Use forwardRef for components that need ref forwarding
+- Implement proper displayName for all components
+- Export both component and types from index files
+- Use composition over inheritance
+
+### Accessibility
+- Implement proper ARIA attributes
+- Ensure keyboard navigation support
+- Use semantic HTML elements
+- Test with screen readers
+- Follow WCAG guidelines
+
+### Performance
+- Optimize bundle size
+- Use dynamic imports for large components
+- Implement proper loading states
+- Optimize images and assets
+- Use React.memo when appropriate
+
+## File Naming Conventions
+- Components: PascalCase (e.g., `Button.tsx`)
+- CSS Modules: `component.module.css`
+- Pages: `page.tsx` (Next.js App Router)
+- Utilities: camelCase (e.g., `utils.ts`)
+
+## Import Patterns
+```typescript
+// Component imports
+import { Button } from '@/ui';
+
+// CSS Module imports
+import styles from './component.module.css';
+
+// Type imports
+import type { ButtonProps } from '@/ui';
+```
+
+## Common Patterns
+
+### CSS Module Usage
+```typescript
+import styles from './button.module.css';
+
+<button className={cn(styles.button, styles[variant], className)}>
+  {children}
+</button>
+```
+
+### Component Props Interface
+```typescript
+interface ComponentProps extends React.HTMLAttributes<HTMLElement> {
+  variant?: 'default' | 'secondary';
+  size?: 'sm' | 'md' | 'lg';
+  children: React.ReactNode;
+}
+```
+
+### ForwardRef Pattern
+```typescript
+const Component = forwardRef<HTMLElement, ComponentProps>(
+  ({ className, children, ...props }, ref) => {
+    return (
+      <element ref={ref} className={cn(styles.base, className)} {...props}>
+        {children}
+      </element>
+    );
+  }
+);
+
+Component.displayName = 'Component';
+```
+
+## Avoid
+- Tailwind CSS classes (use CSS Modules instead)
+- Inline styles
+- Global CSS (except for design tokens)
+- Class-based components
+- Any utility-first CSS frameworks
+
+## Focus Areas
+- Component reusability
+- Type safety
+- Accessibility
+- Performance
+- Maintainable CSS architecture 
