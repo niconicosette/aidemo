@@ -29,3 +29,6 @@
 - explain code to us
 - code review / bug fixing
 - building on an existing feature: adding tanstack query to API endpoint
+
+## sidekick tools
+- https://www.cursorrules.org/
