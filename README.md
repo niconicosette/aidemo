@@ -23,9 +23,13 @@
 ## scenarios to test
 - code translation: from vanilla JS & html to react, from tailwind to CSS
 - creating a net new UI component (from screenshot & figma integration)
+- add storybook and create stories
 - create an API endpoint (feed it documentation)
 - write a test
 - refactor some code
 - explain code to us
 - code review / bug fixing
 - building on an existing feature: adding tanstack query to API endpoint
+
+## sidekick tools
+- https://www.cursorrules.org/
