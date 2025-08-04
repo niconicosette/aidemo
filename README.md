@@ -2,6 +2,9 @@
 
 ## questions
 - which LLMs is it using? which models from which companies?
+  - Claude Opus 4
+  - Claude Sonnet 4
+  - Claude Haiku 3.5 
 - how much does it cost?
 - how deeply it integrates into the codebase?
 - MCP integration options?
